@@ -9,11 +9,10 @@ echo
 
 cd /etc/apt
 
-echo "Downloading patch to QtWebkit..." && sleep 1
+# echo "Downloading patch to QtWebkit..." && sleep 1
 # git clone https://github.com/bnordlund/phantomjs-on-rpi4.git
 
 echo "Preparing to download Debian source package..."
-echo "deb-src http://httpredir.debian.org/debian wheezy main" >> /etc/apt/sources.list
 apt-get -y update
 echo
 
