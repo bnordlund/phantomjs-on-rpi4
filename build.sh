@@ -28,6 +28,7 @@ cd ..
 echo
 
 echo "Enabling apt-get source..." && sleep 1
+# Functionally, this is simply uncommenting the last line in sources.list
 echo "deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi" >> /etc/apt/sources.list
 
 echo "Building the static version of ICU library..." && sleep 1
