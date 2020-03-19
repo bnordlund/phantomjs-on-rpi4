@@ -4,6 +4,7 @@ set -e
 
 echo "Installing packages for development tools..." && sleep 1
 apt-get -y update
+# build-essential, git, and python are already installed in "Raspbian Buster with desktop" (Feb 2020)
 apt-get install -y build-essential git flex bison gperf python ruby libfontconfig1-dev
 echo
 
