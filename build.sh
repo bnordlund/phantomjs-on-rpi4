@@ -40,7 +40,7 @@ cd /etc/apt
 echo
 
 echo "Installing additional dependencies..." && sleep 1
-apt-get install -y ruby-dev libsqlite3-dev libfreetype6 libssl-dev libpng12-dev libjpeg8-dev ttf-mscorefonts-installer fontconfig chrpath libssl1.0-dev libicu-dev
+apt-get install -y ruby-dev libsqlite3-dev libfreetype6 libssl1.0-dev libpng12-dev libjpeg8-dev ttf-mscorefonts-installer fontconfig chrpath libicu-dev
 #apt-get install -y clang-3.8
 #update-alternatives --install /usr/bin/cc cc /usr/bin/clang 100
 #update-alternatives --install /usr/bin/c++ c++ /usr/bin/clang++ 100
