@@ -32,6 +32,7 @@ cd ..
 echo
 
 echo "Building the static version of ICU library..." && sleep 1
+# Uses ICU for C/C++ 63.1
 apt-get source icu
 cd icu-63.1/source
 ./configure --prefix=/usr --enable-static --disable-shared
