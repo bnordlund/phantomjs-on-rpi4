@@ -5,3 +5,6 @@ cd /etc/apt
 sudo git clone https://github.com/bnordlund/phantomjs-on-rpi4.git
 sudo chmod +x phantomjs-on-rpi4/build.sh
 sudo phantomjs-on-rpi4/build.sh
+```
+Between build attempts, make sure to cleanup:
+`git submodule foreach git clean -ddfx
