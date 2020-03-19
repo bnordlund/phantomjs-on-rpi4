@@ -13,10 +13,6 @@ cd /etc/apt
 # echo "Downloading patch to QtWebkit..." && sleep 1
 # git clone https://github.com/bnordlund/phantomjs-on-rpi4.git
 
-echo "Preparing to download Debian source package..."
-apt-get -y update
-echo
-
 OPENSSL_TARGET='linux-x86_64'
 if [ `getconf LONG_BIT` -eq 32 ]; then
     OPENSSL_TARGET='linux-generic32'
@@ -30,6 +26,9 @@ OPENSSL_FLAGS='no-idea no-mdc2 no-rc5 no-zlib no-ssl2 no-ssl3 no-ssl3-method ena
 make depend && make && make install
 cd ..
 echo
+
+echo "Enabling apt-get source..." && sleep 1
+echo "deb-src http://raspbian.raspberrypi.org/raspbian/ buster main contrib non-free rpi" >> /etc/apt/sources.list
 
 echo "Building the static version of ICU library..." && sleep 1
 # Uses ICU for C/C++ 63.1
@@ -75,4 +74,6 @@ cp bin/phantomjs ../phantomjs-on-rpi4
 phantomjs --version
 echo
 
+apt autoremove
+git submodule foreach git clean -ddfx
 echo "Finished"
